@@ -6,11 +6,11 @@ interface Props {
 
 const findStreetFromOrder = (order: Order, address: any[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.From);
-  return senderAddress ? senderAddress.Street1 : 'Street not found';
+  return senderAddress ? senderAddress : 'Street not found';
 };
 const findStreetToOrder = (order: Order, address: any[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.To);
-  return senderAddress ? senderAddress.Street1 : 'Street not found';
+  return senderAddress ? senderAddress : 'Street not found';
 };
 
 export const OrderCard = ({ orders }: Props) => {
@@ -19,7 +19,7 @@ export const OrderCard = ({ orders }: Props) => {
   return (
     <div className="grid-cols-6">
       <div className="col-span-5">
-        <div className="max-w-lg mx-auto bg-white border rounded-lg shadow-md p-4 mt-5">
+        <div className="max-w-4xl mx-auto bg-white border rounded-lg shadow-md p-4 mt-5">
           <div className="flex justify-between mb-4">
             <div>
               <p className="text-gray-600">ORDER PLACED</p>
@@ -39,17 +39,21 @@ export const OrderCard = ({ orders }: Props) => {
             <p className="text-green-600 font-bold">{orders.status}</p>
           </div>
 
-          <div className="flex items-center py-4 justify-between">
-            {/* From Section */}
-            <div className="">
+          <div className="flex py-4 justify-start mx-auto">
+            <div className="w-1/2 text-left">
               <p className="text-green-600 font-bold">From</p>
-              <p className="text-black font-bold">{AddressFrom}</p>
+              <p className="text-black font-bold">{AddressFrom.street1}</p>
+              <p className="text-black font-bold">{AddressFrom.city}</p>
+              <p className="text-black font-bold">{AddressFrom.zip}</p>
             </div>
 
-            {/* To Section */}
-            <div className="">
+            <div className="w-4"></div>
+
+            <div className="w-1/2 text-left">
               <p className="text-green-600 font-bold">To</p>
-              <p className="text-black font-bold">{AddressTo}</p>
+              <p className="text-black font-bold">{AddressTo.street1}</p>
+              <p className="text-black font-bold">{AddressTo.city}</p>
+              <p className="text-black font-bold">{AddressTo.zip}</p>
             </div>
           </div>
 
@@ -58,7 +62,14 @@ export const OrderCard = ({ orders }: Props) => {
             <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
               View details
             </button>
+            <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
+              Get Help
+            </button>
+            <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
+              Write a Review
+            </button>
           </div>
+
         </div>
       </div>
     </div>
