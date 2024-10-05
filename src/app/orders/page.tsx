@@ -3,12 +3,11 @@ import { OrderCard } from "@/components/OrderCard";
 import { Orders } from "@/data/dataset";
 import { FaSearch } from 'react-icons/fa';
 
-
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper className='pb-24 pt-10 lg:grid lg:grid-cols-4'>
-        <div className="col-span-3 px-6 lg:px-0 lg:pt-4">
+      <MaxWidthWrapper className='pb-24 pt-10 lg:grid lg:grid-cols-5'>
+        <div className="col-span-4 px-6 lg:px-0 lg:pt-5">
           <div className="flex justify-between">
             <div className="font-bold !leading-tight text-gray-900 text-5xl">Your Orders</div>
             <div className="flex items-center">
@@ -23,7 +22,7 @@ export default function Home() {
               </div>
 
               {/* Search button */}
-              <button className="ml-2 bg-gray-800 text-white rounded-full px-4 py-1">
+              <button className="ml-2 bg-green-600 text-white rounded-full px-4 py-1">
                 Search Orders
               </button>
             </div>

@@ -1,15 +1,15 @@
 export const Address = [
   {
     addressNumber: '11111',
-    street1: 'Betcon Lab, Yale University',
-    city: 'New Haven',
+    street1: 'Yale University Cleanroom',
+    city: 'New Haven, CT',
     zip:'06511'
 
   },
   {
     addressNumber: '22222',
     street1: 'YHack Tsai City',
-    city: 'New Haven',
+    city: 'New Haven, CT',
     zip:'06511'
   },
 ];

@@ -58,14 +58,14 @@ export const OrderCard = ({ orders }: Props) => {
           </div>
 
 
-          <div className="flex space-x-4 pt-4 border-t">
-            <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
+          <div className="flex space-x-4 pt-4 border-t text-sm justify-end">
+            <button className="border px-3 py-2 rounded-lg hover:bg-gray-100">
               View details
             </button>
-            <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
+            <button className="border px-3 py-2 rounded-lg hover:bg-gray-100">
               Get Help
             </button>
-            <button className="border px-4 py-2 rounded-lg hover:bg-gray-100">
+            <button className="border px-3 py-2 rounded-lg hover:bg-gray-100">
               Write a Review
             </button>
           </div>
