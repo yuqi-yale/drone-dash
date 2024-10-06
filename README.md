@@ -1,37 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Website: dronedash.design
 
-## Getting Started
+## 🚀 Inspiration
 
-First, run the development server:
+The inspiration behind **DroneDash** came from the desire to address food deserts in urban areas, where residents have limited access to fresh produce. Recognizing the inefficiencies of conventional delivery systems and their environmental impact, we aimed to create a solution that combines urban farming with drone technology, offering quick and sustainable deliveries of fresh food.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📦 What It Does
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**DroneDash** is a web-based platform that simulates drone delivery services for fresh produce. Key features include:
+- **Order Placement**: Users can select and order fresh, locally grown food from urban farms.
+- **Delivery Scheduling**: Residents can schedule deliveries at their convenience.
+- **Delivery Tracking**: The app simulates the drone's delivery route in real-time.
+- **Carbon Savings Calculation**: Users can see how much carbon emissions are reduced compared to traditional delivery methods. 
+- **Personalized dietary recommendations** : User preference information and order history is stored with us, which allows us to give them personalized feedback on their future orders, and allow for personalised recommendations!
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ How We Built It
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+For **Ordering System**, we used multiple Javascript frameworks mainly Next.js and React.js to build a deployable website for delivery application. We were also able to add a carbon footprint calculator in our code that would calculate what your 'emission score' is. We used Lightbox and Google Maps API's to integrate with our model to perform real-time route mapping. We focused on enhancing user experience and making our interface intuitive to use. 
 
-## Learn More
+For **Scheduling System**, the project will leverage a range of technologies, including a Reinforcement Learning-based AI model, Graph Neural Networks (GNNs), and a Vehicle Routing Problem (VRP) solver for real-time dynamic scheduling. A constraint programming approach is used to optimize routing and ensure timely deliveries. The platform's tech stack also includes UI components for real-time feedback and monitoring of drone locations during the delivery process.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛑 Challenges We Ran Into
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We faced several challenges during development:
+- **Map Integration**: Integrate LightBox Canmap and Google Map/Mapbox Map as the backend map server. It can give us great estimation of the delivery time and also real-time locaiton of our all drones.
+- **Great Website with UI friendly**: With Next.js, Tailwind.css, and Shadcn/ui, we build a fantastic website with great UI. It can lead customers to make order fast and easily.
+- **Route Optimization**: Finding an efficient way to simulate drone delivery routes that consider multiple factors like distance and energy consumption.
+- **Carbon Emission Calculations**: Accurately calculating the carbon savings was complex, as it required comparing multiple delivery methods and their environmental impacts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎉 Accomplishments That We're Proud Of
 
-## Deploy on Vercel
+We are proud of several accomplishments, including:
+- Successfully integrating real-time map tracking for a more interactive user experience, and using various edge cases in our code to effectively handle throttling and excess of server requests. (good code is important🤷🏻‍♀️)
+- Creating a functional prototype that accurately simulates the drone delivery process and deploying it.
+- Developing a user-friendly interface that allows easy ordering and delivery tracking. 
+- Creating a personalised 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 What We Learned
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# drone-dash
+Throughout the project, we learned:
+- Technical skills in web development, particularly in integrating APIs and managing databases.
+- Insights into sustainability and how technology can enhance food distribution in urban areas.
+- We learned how much traction the drone delivery industry is getting with services being launched, our product will allow these companies to work with their users much more efficiently 
+
+## 🔮 What's Next for DroneDash
+
+For the future of **DroneDash**, we plan to:
+- Connect the Ordering System and Scheduling System to achieve full functionality.
+- Develop great and reliable Scheduling System structure to get best scheduling solution for our drones.
+- Implement real-time drone tracking using GPS technology.
+- Explore partnerships with local farms to establish a real-world pilot program.
+- Use advanced ML algorithms to personalize food and delivery recommendations for individual users and build a mobile application out of it as well!
