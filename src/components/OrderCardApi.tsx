@@ -66,7 +66,6 @@ export const OrderCardApi = ({ orders, href, button_info}: Props) => {
             <MapComponent />
           </MapProvider>
 
-
           <div className="flex text-lg space-x-4 pt-4 border-t justify-end">
             <Link
               href={href}
