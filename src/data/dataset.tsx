@@ -1,3 +1,11 @@
+const time_options: Intl.DateTimeFormatOptions = {
+  month: 'short',  // 'Oct'
+  day: '2-digit',  // '05'
+  hour: '2-digit',  // '08'
+  minute: '2-digit', // '00'
+  hour12: false     // Optional, to use 24-hour format
+};
+
 export type Add = {
   addressNumber: string,
   street1: string,
@@ -18,6 +26,12 @@ export const Address: Add[] = [
     street1: 'YHack Tsai City',
     city: 'New Haven, CT',
     zip: '06511'
+  },
+  {
+    addressNumber: '33333',
+    street1: 'Midtown Manhattan',
+    city: 'New York, NY',
+    zip: '00000'
   },
 ];
 
@@ -45,21 +59,33 @@ export type Order = {
 export const Orders: Order[] = [
   {
     trackNumber: '111111111',
-    From: '11111', // addressNumber
-    To: '22222', // addressNumber
+    From: '33333', // addressNumber
+    To: '11111', // addressNumber
     createTime: 'Oct 05',
     price: 5.88,
-    nameFrom: 'Yuqi',
-    nameTo: 'yhack',
+    nameFrom: 'ActualFood',
+    nameTo: 'Yuqi',
     status_number: 0,
     status: '5 min for a drone DASH to you!'
   },
 
   {
     trackNumber: '111111111',
+    From: '33333', // addressNumber
+    To: '11111', // addressNumber
+    createTime: new Date().toLocaleString('en-US', time_options).replace(',', ''),
+    price: 5.88,
+    nameFrom: 'ActualFood',
+    nameTo: 'Yuqi',
+    status_number: 1,
+    status: 'Drone on the way!'
+  },
+
+  {
+    trackNumber: '111111111',
     From: '11111', // addressNumber
     To: '22222', // addressNumber
-    createTime: 'Oct 05',
+    createTime: 'Oct 05, 11:00',
     price: 5.88,
     nameFrom: 'Yuqi',
     nameTo: 'yhack',
@@ -71,7 +97,7 @@ export const Orders: Order[] = [
     trackNumber: '2222222',
     From: '22222', // addressNumber
     To: '11111', // addressNumber
-    createTime: 'Oct 04',
+    createTime: 'Oct 04, 11:00',
     price: 7.01,
     nameFrom: 'Yuqi',
     nameTo: 'yhack',

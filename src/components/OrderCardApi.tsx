@@ -7,6 +7,7 @@ import { MapComponent } from "./Maps";
 interface Props {
   orders: Order;
   href: string;
+  button_info: string;
 }
 
 const findStreetFromOrder = (order: Order, address: Add[]) => {
@@ -17,7 +18,7 @@ const findStreetToOrder = (order: Order, address: Add[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.To);
   return senderAddress ? senderAddress : AddressNoFound;
 };
-export const OrderCardApi = ({ orders, href }: Props) => {
+export const OrderCardApi = ({ orders, href, button_info}: Props) => {
   const AddressFrom = findStreetFromOrder(orders, Address);
   const AddressTo = findStreetToOrder(orders, Address);
   return (
@@ -65,7 +66,6 @@ export const OrderCardApi = ({ orders, href }: Props) => {
             <MapComponent />
           </MapProvider>
 
-
           <div className="flex text-lg space-x-4 pt-4 border-t justify-end">
             <Link
               href={href}
@@ -73,7 +73,7 @@ export const OrderCardApi = ({ orders, href }: Props) => {
                 size: 'lg',
                 className: 'hidden lg:flex items-center gap-1'
               })}>
-              Continue
+              {button_info}
             </Link>
           </div>
 
