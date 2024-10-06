@@ -1,11 +1,11 @@
-import Image from "next/image";
+import { MapProvider } from "../providers/map-provider";
+import {MapComponent} from "@/components/Maps"
 
 export default function Home() {
+
   return (
-    <div>
-      <h1>
-        aaa
-      </h1>
-    </div>
+    <MapProvider>
+      <MapComponent/>
+    </MapProvider>
   );
 }

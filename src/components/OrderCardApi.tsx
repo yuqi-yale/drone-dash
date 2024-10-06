@@ -67,7 +67,7 @@ export const OrderCardApi = ({ orders, href }: Props) => {
 
           <div className="flex text-lg space-x-4 pt-4 border-t justify-end">
             <Link
-              href='/case/startcase'
+              href={href}
               className={buttonVariants({
                 size: 'lg',
                 className: 'hidden lg:flex items-center gap-1'

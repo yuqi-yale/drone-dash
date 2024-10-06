@@ -41,7 +41,7 @@ const Navbar = async () => {
             <Link
               href='/case/startcase'
               className={buttonVariants({
-                size: 'sm',
+                size: 'lg',
                 className: 'hidden sm:flex items-center gap-1'
               })}>
               Create order
