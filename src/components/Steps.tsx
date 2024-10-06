@@ -31,7 +31,7 @@ const Steps = () => {
         const isCompleted = STEPS.slice(i + 1).some((step) =>
           pathname.endsWith(step.url)
         )
-        const imgPath = `/Drone-${i + 1}.png`
+        const imgPath = `/drone-${i + 1}.png`
 
         return (
           <li key={step.name} className='relative overflow-hidden lg:flex-1'>
