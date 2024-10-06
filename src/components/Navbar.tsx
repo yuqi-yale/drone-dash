@@ -39,7 +39,7 @@ const Navbar = async () => {
             <div className='h-8 w-px bg-zinc-200 hidden sm:block'></div>
 
             <Link
-              href='startcase'
+              href='/case/startcase'
               className={buttonVariants({
                 size: 'sm',
                 className: 'hidden sm:flex items-center gap-1'
