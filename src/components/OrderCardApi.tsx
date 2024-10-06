@@ -1,6 +1,8 @@
 import { Order, Address } from "@/data/dataset";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
+import { MapProvider } from "@/app/providers/map-provider";
+import { MapComponent } from "./Maps";
 
 interface Props {
   orders: Order;
@@ -60,9 +62,9 @@ export const OrderCardApi = ({ orders, href }: Props) => {
             </div>
           </div>
 
-          <div>api here</div>
-          <div>api here</div>
-          <div>api here</div>
+          <MapProvider>
+            <MapComponent />
+          </MapProvider>
 
 
           <div className="flex text-lg space-x-4 pt-4 border-t justify-end">
