@@ -1,4 +1,4 @@
-import { Order, Address } from "@/data/dataset";
+import { Order, Address, Add, AddressNoFound } from "@/data/dataset";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { MapProvider } from "@/app/providers/map-provider";
@@ -9,15 +9,14 @@ interface Props {
   href: string;
 }
 
-const findStreetFromOrder = (order: Order, address: any[]) => {
+const findStreetFromOrder = (order: Order, address: Add[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.From);
-  return senderAddress ? senderAddress : 'Street not found';
+  return senderAddress ? senderAddress : AddressNoFound;
 };
-const findStreetToOrder = (order: Order, address: any[]) => {
+const findStreetToOrder = (order: Order, address: Add[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.To);
-  return senderAddress ? senderAddress : 'Street not found';
+  return senderAddress ? senderAddress : AddressNoFound;
 };
-
 export const OrderCardApi = ({ orders, href }: Props) => {
   const AddressFrom = findStreetFromOrder(orders, Address);
   const AddressTo = findStreetToOrder(orders, Address);
