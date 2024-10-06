@@ -74,8 +74,8 @@ export default function Home() {
 
         <div className='col-span-full lg:col-span-1 w-full flex justify-center px-8 sm:px-16 md:px-0 mt-32 lg:mx-0 lg:mt-20 h-fit'>
           <div className='relative md:max-w-xl'>
-            <div style={{ width: '60vw', height: '50vh', display: 'flex', flexDirection: 'column' }}>
-              <Spline scene="https://my.spline.design/drone-8d99a24f44423baf520acd504d31e5ce/" />
+            <div style={{ width: '60vw', height: '80vh', display: 'flex', flexDirection: 'column' }}>
+              <Spline scene="https://prod.spline.design/9u3rH-NOvUS93cPO/scene.splinecode" />
             </div>
           </div>
         </div>
