@@ -1,5 +1,4 @@
-# Website: dronedash.design
-**For 2024 YHack Competition**
+# Drone Dash - The NextGeneration EcoConscious Delivery Solution
 
 ## 🚀 Inspiration
 
