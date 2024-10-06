@@ -13,13 +13,20 @@ const findStreetFromOrder = (order: Order, address: Add[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.From);
   return senderAddress ? senderAddress : AddressNoFound;
 };
+
 const findStreetToOrder = (order: Order, address: Add[]) => {
   const senderAddress = address.find(address => address.addressNumber === order.To);
   return senderAddress ? senderAddress : AddressNoFound;
 };
+
 export const OrderCardApi = ({ orders, href }: Props) => {
   const AddressFrom = findStreetFromOrder(orders, Address);
   const AddressTo = findStreetToOrder(orders, Address);
+
+  // Create the full address strings for origin and destination
+  const origin = `${AddressFrom.street1}, ${AddressFrom.city}, ${AddressFrom.zip}`;
+  const destination = `${AddressTo.street1}, ${AddressTo.city}, ${AddressTo.zip}`;
+
   return (
     <div className="grid-cols-6">
       <div className="col-span-5">
@@ -62,9 +69,8 @@ export const OrderCardApi = ({ orders, href }: Props) => {
           </div>
 
           <MapProvider>
-            <MapComponent />
+            <MapComponent origin={origin} destination={destination} />
           </MapProvider>
-
 
           <div className="flex text-lg space-x-4 pt-4 border-t justify-end">
             <Link
@@ -76,7 +82,6 @@ export const OrderCardApi = ({ orders, href }: Props) => {
               Continue
             </Link>
           </div>
-
         </div>
       </div>
     </div>
