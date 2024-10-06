@@ -69,7 +69,13 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           {/* Profile Header */}
           <div className="flex items-center space-x-4 mb-6">
-            <div className="w-16 h-16 bg-gray-300 rounded-full" /> {/* Profile Image */}
+            <div className="w-16 h-16 bg-gray-300 rounded-full">
+              <img
+                src='/icon.png'
+                className=
+                'flex h-20 w-20 object-contain items-center justify-center'>
+              </img>
+            </div>
             <div>
               <h1 className="text-2xl font-semibold">Simon Zhao</h1>
               <button className="text-blue-500 text-sm">Edit Profile</button>
